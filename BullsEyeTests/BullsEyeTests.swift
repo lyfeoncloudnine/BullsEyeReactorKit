@@ -13,6 +13,7 @@ import Quick
 final class BullsEyeTests: QuickSpec {
     override func spec() {
         recordServiceTests()
+        gameViewReactorTests()
     }
 }
 
@@ -50,6 +51,110 @@ private extension BullsEyeTests {
                 it("기록을 지울 수 있다") {
                     records = recordService.delete(record: record)
                     XCTAssertTrue(records.isEmpty)
+                }
+            }
+        }
+    }
+    
+    func gameViewReactorTests() {
+        describe("GameViewReactor Tests") {
+            var gameViewReactor: GameViewReactor!
+            
+            beforeEach {
+                gameViewReactor = GameViewReactor()
+            }
+            
+            context("GameViewReactor가 초기화하면") {
+                it("round는 1이다") {
+                    XCTAssertEqual(gameViewReactor.currentState.round, 1)
+                }
+                
+                it("score는 100이다") {
+                    XCTAssertEqual(gameViewReactor.currentState.score, 100)
+                }
+                
+                it("isPlaying은 false다") {
+                    XCTAssertFalse(gameViewReactor.currentState.isPlaying)
+                }
+                
+                it("targetNumber는 nil이다") {
+                    XCTAssertNil(gameViewReactor.currentState.targetNumber)
+                }
+                
+                it("expectNumber는 50이다") {
+                    XCTAssertEqual(gameViewReactor.currentState.expectNumber, 50)
+                }
+            }
+            
+            context("게임을 시작하면") {
+                beforeEach {
+                    gameViewReactor.action.onNext(.play)
+                }
+                
+                it("round는 1이다") {
+                    XCTAssertEqual(gameViewReactor.currentState.round, 1)
+                }
+                
+                it("score는 100이다") {
+                    XCTAssertEqual(gameViewReactor.currentState.score, 100)
+                }
+                
+                it("isPlaying은 true다") {
+                    XCTAssertTrue(gameViewReactor.currentState.isPlaying)
+                }
+                
+                it("targetNumber는 nil이 아니다") {
+                    XCTAssertNotNil(gameViewReactor.currentState.targetNumber)
+                }
+                
+                it("expectNumber는 50이다") {
+                    XCTAssertEqual(gameViewReactor.currentState.expectNumber, 50)
+                }
+                
+                context("정답을 못맞추면") {
+                    beforeEach {
+                        gameViewReactor.action.onNext(.changeExpectNumber(0))
+                        gameViewReactor.action.onNext(.check)
+                    }
+                    
+                    it("round는 2이다") {
+                        XCTAssertEqual(gameViewReactor.currentState.round, 1)
+                    }
+                    
+                    it("score는 99다") {
+                        XCTAssertEqual(gameViewReactor.currentState.score, 100)
+                    }
+                    
+                    it("expectNumber는 50이다") {
+                        XCTAssertEqual(gameViewReactor.currentState.expectNumber, 50)
+                    }
+                    
+                    it("isFinish는 false다") {
+                        XCTAssertFalse(gameViewReactor.currentState.isFinish)
+                    }
+                }
+                
+                context("정답을 맞추면") {
+                    beforeEach {
+                        gameViewReactor.action.onNext(.changeExpectNumber(gameViewReactor.currentState.targetNumber))
+                        gameViewReactor.action.onNext(.check)
+                    }
+                    
+                    it("round는 1이다") {
+                        XCTAssertEqual(gameViewReactor.currentState.round, 1)
+                    }
+                    
+                    it("score는 100이다") {
+                        XCTAssertEqual(gameViewReactor.currentState.score, 100)
+                    }
+                    
+                    it("isPlaying은 false다") {
+                        XCTAssertFalse(gameViewReactor.currentState.isPlaying)
+                    }
+                    
+                    it("isFinish는 true다") {
+                        XCTAssertTrue(gameViewReactor.currentState.isFinish)
+                    }
                 }
             }
         }

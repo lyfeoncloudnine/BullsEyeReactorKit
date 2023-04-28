@@ -21,6 +21,7 @@
 		B2DC53CD29FBB06400EF6C43 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DC53CC29FBB06400EF6C43 /* Record.swift */; };
 		B2DC53D129FBB0DF00EF6C43 /* RecordServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DC53D029FBB0DF00EF6C43 /* RecordServiceType.swift */; };
 		B2DC53D329FBB30600EF6C43 /* RecordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DC53D229FBB30600EF6C43 /* RecordService.swift */; };
+		B2DC53D729FBBA7D00EF6C43 /* GameViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DC53D629FBBA7D00EF6C43 /* GameViewReactor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		B2DC53CC29FBB06400EF6C43 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 		B2DC53D029FBB0DF00EF6C43 /* RecordServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordServiceType.swift; sourceTree = "<group>"; };
 		B2DC53D229FBB30600EF6C43 /* RecordService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordService.swift; sourceTree = "<group>"; };
+		B2DC53D629FBBA7D00EF6C43 /* GameViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewReactor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				B2DC53CE29FBB0D000EF6C43 /* Services */,
+				B2DC53D429FBBA4600EF6C43 /* Scenes */,
 				B2DC53CB29FBB05800EF6C43 /* Model */,
 				B2DC539A29FBAB7E00EF6C43 /* ViewController.swift */,
 			);
@@ -158,6 +161,22 @@
 				B2DC53D229FBB30600EF6C43 /* RecordService.swift */,
 			);
 			path = RecordService;
+			sourceTree = "<group>";
+		};
+		B2DC53D429FBBA4600EF6C43 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				B2DC53D529FBBA6700EF6C43 /* Game */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		B2DC53D529FBBA6700EF6C43 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				B2DC53D629FBBA7D00EF6C43 /* GameViewReactor.swift */,
+			);
+			path = Game;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,6 +299,7 @@
 				B2DC53D129FBB0DF00EF6C43 /* RecordServiceType.swift in Sources */,
 				B2DC539B29FBAB7E00EF6C43 /* ViewController.swift in Sources */,
 				B2DC539729FBAB7E00EF6C43 /* AppDelegate.swift in Sources */,
+				B2DC53D729FBBA7D00EF6C43 /* GameViewReactor.swift in Sources */,
 				B2DC53CD29FBB06400EF6C43 /* Record.swift in Sources */,
 				B2DC53D329FBB30600EF6C43 /* RecordService.swift in Sources */,
 			);
