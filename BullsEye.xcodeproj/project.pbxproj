@@ -23,6 +23,7 @@
 		B2DC53D329FBB30600EF6C43 /* RecordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DC53D229FBB30600EF6C43 /* RecordService.swift */; };
 		B2DC53D729FBBA7D00EF6C43 /* GameViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DC53D629FBBA7D00EF6C43 /* GameViewReactor.swift */; };
 		B2DC53DB29FBC3D000EF6C43 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DC53DA29FBC3D000EF6C43 /* BaseView.swift */; };
+		B2DC53E329FBC4D600EF6C43 /* PreviewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DC53E229FBC4D600EF6C43 /* PreviewHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		B2DC53D229FBB30600EF6C43 /* RecordService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordService.swift; sourceTree = "<group>"; };
 		B2DC53D629FBBA7D00EF6C43 /* GameViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewReactor.swift; sourceTree = "<group>"; };
 		B2DC53DA29FBC3D000EF6C43 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		B2DC53E229FBC4D600EF6C43 /* PreviewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 				B2DC53CE29FBB0D000EF6C43 /* Services */,
 				B2DC53D429FBBA4600EF6C43 /* Scenes */,
 				B2DC53DC29FBC3D300EF6C43 /* Base */,
+				B2DC53E029FBC47500EF6C43 /* Helper */,
 				B2DC53CB29FBB05800EF6C43 /* Model */,
 				B2DC539A29FBAB7E00EF6C43 /* ViewController.swift */,
 			);
@@ -188,6 +191,22 @@
 				B2DC53DA29FBC3D000EF6C43 /* BaseView.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		B2DC53E029FBC47500EF6C43 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				B2DC53E129FBC4C900EF6C43 /* PreviewHelper */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		B2DC53E129FBC4C900EF6C43 /* PreviewHelper */ = {
+			isa = PBXGroup;
+			children = (
+				B2DC53E229FBC4D600EF6C43 /* PreviewHelper.swift */,
+			);
+			path = PreviewHelper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,6 +326,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2DC53E329FBC4D600EF6C43 /* PreviewHelper.swift in Sources */,
 				B2DC53D129FBB0DF00EF6C43 /* RecordServiceType.swift in Sources */,
 				B2DC539B29FBAB7E00EF6C43 /* ViewController.swift in Sources */,
 				B2DC539729FBAB7E00EF6C43 /* AppDelegate.swift in Sources */,
