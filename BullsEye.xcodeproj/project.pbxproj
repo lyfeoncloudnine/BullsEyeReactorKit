@@ -12,6 +12,12 @@
 		B2DC53A029FBAB8000EF6C43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2DC539F29FBAB8000EF6C43 /* Assets.xcassets */; };
 		B2DC53A329FBAB8000EF6C43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2DC53A129FBAB8000EF6C43 /* LaunchScreen.storyboard */; };
 		B2DC53B129FBAB8600EF6C43 /* BullsEyeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DC53B029FBAB8600EF6C43 /* BullsEyeTests.swift */; };
+		B2DC53BC29FBAF0B00EF6C43 /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = B2DC53BB29FBAF0B00EF6C43 /* Quick */; };
+		B2DC53BF29FBAF1E00EF6C43 /* Hook in Frameworks */ = {isa = PBXBuildFile; productRef = B2DC53BE29FBAF1E00EF6C43 /* Hook */; };
+		B2DC53C229FBAF3400EF6C43 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = B2DC53C129FBAF3400EF6C43 /* Then */; };
+		B2DC53C529FBAF6400EF6C43 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = B2DC53C429FBAF6400EF6C43 /* RxCocoa */; };
+		B2DC53C729FBAF6400EF6C43 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B2DC53C629FBAF6400EF6C43 /* RxSwift */; };
+		B2DC53CA29FBAF7E00EF6C43 /* ReactorKit in Frameworks */ = {isa = PBXBuildFile; productRef = B2DC53C929FBAF7E00EF6C43 /* ReactorKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +46,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2DC53C529FBAF6400EF6C43 /* RxCocoa in Frameworks */,
+				B2DC53BF29FBAF1E00EF6C43 /* Hook in Frameworks */,
+				B2DC53C729FBAF6400EF6C43 /* RxSwift in Frameworks */,
+				B2DC53CA29FBAF7E00EF6C43 /* ReactorKit in Frameworks */,
+				B2DC53C229FBAF3400EF6C43 /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2DC53BC29FBAF0B00EF6C43 /* Quick in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +143,13 @@
 			dependencies = (
 			);
 			name = BullsEye;
+			packageProductDependencies = (
+				B2DC53BE29FBAF1E00EF6C43 /* Hook */,
+				B2DC53C129FBAF3400EF6C43 /* Then */,
+				B2DC53C429FBAF6400EF6C43 /* RxCocoa */,
+				B2DC53C629FBAF6400EF6C43 /* RxSwift */,
+				B2DC53C929FBAF7E00EF6C43 /* ReactorKit */,
+			);
 			productName = BullsEye;
 			productReference = B2DC539329FBAB7E00EF6C43 /* BullsEye.app */;
 			productType = "com.apple.product-type.application";
@@ -149,6 +168,9 @@
 				B2DC53B329FBAB8600EF6C43 /* PBXTargetDependency */,
 			);
 			name = BullsEyeTests;
+			packageProductDependencies = (
+				B2DC53BB29FBAF0B00EF6C43 /* Quick */,
+			);
 			productName = BullsEyeTests;
 			productReference = B2DC53AE29FBAB8600EF6C43 /* BullsEyeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -181,6 +203,13 @@
 				Base,
 			);
 			mainGroup = B2DC538A29FBAB7E00EF6C43;
+			packageReferences = (
+				B2DC53BA29FBAF0B00EF6C43 /* XCRemoteSwiftPackageReference "Quick" */,
+				B2DC53BD29FBAF1E00EF6C43 /* XCRemoteSwiftPackageReference "Hook" */,
+				B2DC53C029FBAF3400EF6C43 /* XCRemoteSwiftPackageReference "Then" */,
+				B2DC53C329FBAF6400EF6C43 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				B2DC53C829FBAF7E00EF6C43 /* XCRemoteSwiftPackageReference "ReactorKit" */,
+			);
 			productRefGroup = B2DC539429FBAB7E00EF6C43 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -483,6 +512,82 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B2DC53BA29FBAF0B00EF6C43 /* XCRemoteSwiftPackageReference "Quick" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Quick";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.1.0;
+			};
+		};
+		B2DC53BD29FBAF1E00EF6C43 /* XCRemoteSwiftPackageReference "Hook" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lyfeoncloudnine/Hook";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		B2DC53C029FBAF3400EF6C43 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+		B2DC53C329FBAF6400EF6C43 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+		B2DC53C829FBAF7E00EF6C43 /* XCRemoteSwiftPackageReference "ReactorKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactorKit/ReactorKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B2DC53BB29FBAF0B00EF6C43 /* Quick */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B2DC53BA29FBAF0B00EF6C43 /* XCRemoteSwiftPackageReference "Quick" */;
+			productName = Quick;
+		};
+		B2DC53BE29FBAF1E00EF6C43 /* Hook */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B2DC53BD29FBAF1E00EF6C43 /* XCRemoteSwiftPackageReference "Hook" */;
+			productName = Hook;
+		};
+		B2DC53C129FBAF3400EF6C43 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B2DC53C029FBAF3400EF6C43 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+		B2DC53C429FBAF6400EF6C43 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B2DC53C329FBAF6400EF6C43 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		B2DC53C629FBAF6400EF6C43 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B2DC53C329FBAF6400EF6C43 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		B2DC53C929FBAF7E00EF6C43 /* ReactorKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B2DC53C829FBAF7E00EF6C43 /* XCRemoteSwiftPackageReference "ReactorKit" */;
+			productName = ReactorKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B2DC538B29FBAB7E00EF6C43 /* Project object */;
 }
