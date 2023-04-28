@@ -34,9 +34,10 @@ final class GameView: BaseView {
         $0.font = .preferredFont(forTextStyle: .largeTitle)
     }
     
-    let slider: UISlider = UISlider().then {
+    let slider = UISlider().then {
         $0.minimumValue = 1
-        $0.maximumValue = 1
+        $0.maximumValue = 100
+        $0.value = 50
     }
     
     let minNumberLabel = UILabel().then {
