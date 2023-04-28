@@ -19,10 +19,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 private extension AppDelegate {
     func setRootViewController() {
-        let rootViewController = ViewController()
+        let viewController = GameViewController()
+        viewController.reactor = GameViewReactor()
+        let rootViewController = UINavigationController(rootViewController: viewController)
+        
         let initialWindow = UIWindow(frame: UIScreen.main.bounds)
         initialWindow.rootViewController = rootViewController
         initialWindow.makeKeyAndVisible()
+        
         window = initialWindow
     }
 }
