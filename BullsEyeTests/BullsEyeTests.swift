@@ -6,30 +6,52 @@
 //
 
 import XCTest
+import Quick
 
-final class BullsEyeTests: XCTestCase {
+@testable import BullsEye
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+final class BullsEyeTests: QuickSpec {
+    override func spec() {
+        recordServiceTests()
     }
+}
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        measure {
-            // Put the code you want to measure the time of here.
+private extension BullsEyeTests {
+    func recordServiceTests() {
+        describe("RecordService Tests") {
+            var recordService: RecordServiceType!
+            
+            beforeEach {
+                recordService = RecordService()
+            }
+            
+            context("저장된 기록이 없으면") {
+                it("records()는 빈 값이다") {
+                    XCTAssertTrue(recordService.records().isEmpty)
+                }
+            }
+            
+            context("저장된 기록이 있으면") {
+                var records: [Record]!
+                var record = Record(name: "guest", score: 100)
+                
+                beforeEach {
+                    records = recordService.create(record: record)
+                }
+                
+                afterEach {
+                    recordService.clear()
+                }
+                
+                it("records()는 빈 값이 아니다") {
+                    XCTAssertFalse(records.isEmpty)
+                }
+                
+                it("기록을 지울 수 있다") {
+                    records = recordService.delete(record: record)
+                    XCTAssertTrue(records.isEmpty)
+                }
+            }
         }
     }
-
 }
