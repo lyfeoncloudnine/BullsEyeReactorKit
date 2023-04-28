@@ -33,7 +33,6 @@ final class GameViewController: BaseViewController, View {
             .disposed(by: disposeBag)
         
         mainView.slider.rx.value
-            .map { Int($0.rounded()) }
             .map { Reactor.Action.changeExpectNumber($0) }
             .bind(to: reactor.action)
             .disposed(by: disposeBag)

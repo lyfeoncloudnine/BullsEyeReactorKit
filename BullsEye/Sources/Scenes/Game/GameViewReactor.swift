@@ -12,14 +12,15 @@ import ReactorKit
 final class GameViewReactor: Reactor {
     enum Action {
         case play
-        case changeExpectNumber(Int)
+        case changeExpectNumber(Float)
         case check
     }
     
     enum Mutation {
         case setPlay
-        case setExpectNumber(Int)
-        case check
+        case setExpectNumber(Float)
+        case keepPlaying
+        case finish
     }
     
     struct State {
@@ -27,7 +28,7 @@ final class GameViewReactor: Reactor {
         var round = 1
         var score = 100
         var targetNumber: Int?
-        var expectNumber = 50
+        var expectNumber: Float = 50
         @Pulse var alertMessage: String?
     }
     
@@ -42,7 +43,12 @@ final class GameViewReactor: Reactor {
             return .just(.setExpectNumber(expectNumber))
             
         case .check:
-            return .just(.check)
+            if currentState.targetNumber == Int(currentState.expectNumber.rounded()) {
+                return .just(.finish)
+                
+            } else {
+                return .just(.keepPlaying)
+            }
         }
     }
     
@@ -60,17 +66,15 @@ final class GameViewReactor: Reactor {
         case .setExpectNumber(let expectNumber):
             newState.expectNumber = expectNumber
             
-        case .check:
-            if newState.expectNumber == newState.targetNumber {
-                newState.isPlaying = false
-                newState.alertMessage = endMessage(state: newState)
-                
-            } else {
-                newState.alertMessage = retryMessage(state: newState)
-                newState.round += 1
-                newState.score -= 1
-                newState.expectNumber = 50
-            }
+        case .keepPlaying:
+            newState.alertMessage = retryMessage(state: newState)
+            newState.round += 1
+            newState.score -= 1
+            newState.expectNumber = 50
+            
+        case .finish:
+            newState.isPlaying = false
+            newState.alertMessage = endMessage(state: newState)
         }
         
         return newState
@@ -88,7 +92,8 @@ private extension GameViewReactor {
     
     func retryMessage(state: State) -> String {
         guard let targetNumber = state.targetNumber else { fatalError("targetNumber is must not nil") }
-        let diff = abs(targetNumber - state.expectNumber)
+        let expectNumber = Int(state.expectNumber.rounded())
+        let diff = abs(targetNumber - expectNumber)
         return """
         😓아쉬워요😓
         정답과 차이는 \(diff)에요.

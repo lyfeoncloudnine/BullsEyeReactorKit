@@ -132,7 +132,7 @@ private extension BullsEyeTests {
                 
                 context("정답을 맞추면") {
                     beforeEach {
-                        gameViewReactor.action.onNext(.changeExpectNumber(gameViewReactor.currentState.targetNumber!))
+                        gameViewReactor.action.onNext(.changeExpectNumber(Float(gameViewReactor.currentState.targetNumber!)))
                         gameViewReactor.action.onNext(.check)
                     }
                     
