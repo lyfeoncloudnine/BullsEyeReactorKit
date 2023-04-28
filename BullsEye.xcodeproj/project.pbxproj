@@ -81,12 +81,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B22B03C229FBDA2100E9BACC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B2DC538A29FBAB7E00EF6C43 = {
 			isa = PBXGroup;
 			children = (
 				B2DC539529FBAB7E00EF6C43 /* BullsEye */,
 				B2DC53AF29FBAB8600EF6C43 /* BullsEyeTests */,
 				B2DC539429FBAB7E00EF6C43 /* Products */,
+				B22B03C229FBDA2100E9BACC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -564,7 +572,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BullsEye.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BullsEye";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BullsEye.app/BullsEye";
 			};
 			name = Debug;
 		};
@@ -581,7 +589,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BullsEye.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BullsEye";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BullsEye.app/BullsEye";
 			};
 			name = Release;
 		};
