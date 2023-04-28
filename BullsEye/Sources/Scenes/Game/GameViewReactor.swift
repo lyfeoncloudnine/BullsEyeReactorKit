@@ -66,10 +66,10 @@ final class GameViewReactor: Reactor {
                 newState.alertMessage = endMessage(state: newState)
                 
             } else {
+                newState.alertMessage = retryMessage(state: newState)
                 newState.round += 1
                 newState.score -= 1
                 newState.expectNumber = 50
-                newState.alertMessage = retryMessage(state: newState)
             }
         }
         
