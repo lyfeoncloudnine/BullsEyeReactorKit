@@ -8,6 +8,12 @@
 import UIKit
 
 class BaseViewController: UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        configureViews()
+    }
+    
     func configureViews() {
         // Override Point
     }
