@@ -74,11 +74,9 @@
 		B2DC539529FBAB7E00EF6C43 /* BullsEye */ = {
 			isa = PBXGroup;
 			children = (
-				B2DC539629FBAB7E00EF6C43 /* AppDelegate.swift */,
-				B2DC539A29FBAB7E00EF6C43 /* ViewController.swift */,
-				B2DC539F29FBAB8000EF6C43 /* Assets.xcassets */,
-				B2DC53A129FBAB8000EF6C43 /* LaunchScreen.storyboard */,
-				B2DC53A429FBAB8000EF6C43 /* Info.plist */,
+				B2DC53B929FBAD5C00EF6C43 /* App */,
+				B2DC53B829FBAD5A00EF6C43 /* Sources */,
+				B2DC53B729FBAD5400EF6C43 /* Resources */,
 			);
 			path = BullsEye;
 			sourceTree = "<group>";
@@ -89,6 +87,32 @@
 				B2DC53B029FBAB8600EF6C43 /* BullsEyeTests.swift */,
 			);
 			path = BullsEyeTests;
+			sourceTree = "<group>";
+		};
+		B2DC53B729FBAD5400EF6C43 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B2DC539F29FBAB8000EF6C43 /* Assets.xcassets */,
+				B2DC53A129FBAB8000EF6C43 /* LaunchScreen.storyboard */,
+				B2DC53A429FBAB8000EF6C43 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B2DC53B829FBAD5A00EF6C43 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				B2DC539A29FBAB7E00EF6C43 /* ViewController.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		B2DC53B929FBAD5C00EF6C43 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B2DC539629FBAB7E00EF6C43 /* AppDelegate.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,7 +372,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = BullsEye/Info.plist;
+				INFOPLIST_FILE = BullsEye/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -374,7 +398,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = BullsEye/Info.plist;
+				INFOPLIST_FILE = BullsEye/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
