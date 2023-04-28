@@ -18,6 +18,7 @@
 		B2DC53C529FBAF6400EF6C43 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = B2DC53C429FBAF6400EF6C43 /* RxCocoa */; };
 		B2DC53C729FBAF6400EF6C43 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B2DC53C629FBAF6400EF6C43 /* RxSwift */; };
 		B2DC53CA29FBAF7E00EF6C43 /* ReactorKit in Frameworks */ = {isa = PBXBuildFile; productRef = B2DC53C929FBAF7E00EF6C43 /* ReactorKit */; };
+		B2DC53CD29FBB06400EF6C43 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DC53CC29FBB06400EF6C43 /* Record.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,7 @@
 		B2DC53A429FBAB8000EF6C43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2DC53AE29FBAB8600EF6C43 /* BullsEyeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BullsEyeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2DC53B029FBAB8600EF6C43 /* BullsEyeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BullsEyeTests.swift; sourceTree = "<group>"; };
+		B2DC53CC29FBB06400EF6C43 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 		B2DC53B829FBAD5A00EF6C43 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				B2DC53CB29FBB05800EF6C43 /* Model */,
 				B2DC539A29FBAB7E00EF6C43 /* ViewController.swift */,
 			);
 			path = Sources;
@@ -125,6 +128,14 @@
 				B2DC539629FBAB7E00EF6C43 /* AppDelegate.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		B2DC53CB29FBB05800EF6C43 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B2DC53CC29FBB06400EF6C43 /* Record.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,6 +257,7 @@
 			files = (
 				B2DC539B29FBAB7E00EF6C43 /* ViewController.swift in Sources */,
 				B2DC539729FBAB7E00EF6C43 /* AppDelegate.swift in Sources */,
+				B2DC53CD29FBB06400EF6C43 /* Record.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
