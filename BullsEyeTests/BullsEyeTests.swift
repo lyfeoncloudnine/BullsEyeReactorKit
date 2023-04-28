@@ -118,25 +118,21 @@ private extension BullsEyeTests {
                     }
                     
                     it("round는 2이다") {
-                        XCTAssertEqual(gameViewReactor.currentState.round, 1)
+                        XCTAssertEqual(gameViewReactor.currentState.round, 2)
                     }
                     
                     it("score는 99다") {
-                        XCTAssertEqual(gameViewReactor.currentState.score, 100)
+                        XCTAssertEqual(gameViewReactor.currentState.score, 99)
                     }
                     
                     it("expectNumber는 50이다") {
                         XCTAssertEqual(gameViewReactor.currentState.expectNumber, 50)
                     }
-                    
-                    it("isFinish는 false다") {
-                        XCTAssertFalse(gameViewReactor.currentState.isFinish)
-                    }
                 }
                 
                 context("정답을 맞추면") {
                     beforeEach {
-                        gameViewReactor.action.onNext(.changeExpectNumber(gameViewReactor.currentState.targetNumber))
+                        gameViewReactor.action.onNext(.changeExpectNumber(gameViewReactor.currentState.targetNumber!))
                         gameViewReactor.action.onNext(.check)
                     }
                     
@@ -150,10 +146,6 @@ private extension BullsEyeTests {
                     
                     it("isPlaying은 false다") {
                         XCTAssertFalse(gameViewReactor.currentState.isPlaying)
-                    }
-                    
-                    it("isFinish는 true다") {
-                        XCTAssertTrue(gameViewReactor.currentState.isFinish)
                     }
                 }
             }
