@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A13E90312A015D7C00A71B7D /* RecordServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13E90302A015D7C00A71B7D /* RecordServiceTests.swift */; };
+		A13E90332A015DB500A71B7D /* GameViewReactorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13E90322A015DB500A71B7D /* GameViewReactorTests.swift */; };
+		A13E90352A015DE600A71B7D /* RecordViewReactorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13E90342A015DE600A71B7D /* RecordViewReactorTests.swift */; };
 		B2056D912A00DCA600E0E09C /* RecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2056D902A00DCA600E0E09C /* RecordView.swift */; };
 		B2056D942A00DD3F00E0E09C /* ReuseableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2056D932A00DD3F00E0E09C /* ReuseableType.swift */; };
 		B2056D962A00DE1700E0E09C /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2056D952A00DE1700E0E09C /* BaseTableViewCell.swift */; };
@@ -20,7 +23,6 @@
 		B2DC539729FBAB7E00EF6C43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DC539629FBAB7E00EF6C43 /* AppDelegate.swift */; };
 		B2DC53A029FBAB8000EF6C43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2DC539F29FBAB8000EF6C43 /* Assets.xcassets */; };
 		B2DC53A329FBAB8000EF6C43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2DC53A129FBAB8000EF6C43 /* LaunchScreen.storyboard */; };
-		B2DC53B129FBAB8600EF6C43 /* BullsEyeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DC53B029FBAB8600EF6C43 /* BullsEyeTests.swift */; };
 		B2DC53BC29FBAF0B00EF6C43 /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = B2DC53BB29FBAF0B00EF6C43 /* Quick */; };
 		B2DC53BF29FBAF1E00EF6C43 /* Hook in Frameworks */ = {isa = PBXBuildFile; productRef = B2DC53BE29FBAF1E00EF6C43 /* Hook */; };
 		B2DC53C229FBAF3400EF6C43 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = B2DC53C129FBAF3400EF6C43 /* Then */; };
@@ -49,6 +51,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A13E90302A015D7C00A71B7D /* RecordServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordServiceTests.swift; sourceTree = "<group>"; };
+		A13E90322A015DB500A71B7D /* GameViewReactorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewReactorTests.swift; sourceTree = "<group>"; };
+		A13E90342A015DE600A71B7D /* RecordViewReactorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewReactorTests.swift; sourceTree = "<group>"; };
 		B2056D902A00DCA600E0E09C /* RecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordView.swift; sourceTree = "<group>"; };
 		B2056D932A00DD3F00E0E09C /* ReuseableType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseableType.swift; sourceTree = "<group>"; };
 		B2056D952A00DE1700E0E09C /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
@@ -64,7 +69,6 @@
 		B2DC53A229FBAB8000EF6C43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B2DC53A429FBAB8000EF6C43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2DC53AE29FBAB8600EF6C43 /* BullsEyeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BullsEyeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B2DC53B029FBAB8600EF6C43 /* BullsEyeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BullsEyeTests.swift; sourceTree = "<group>"; };
 		B2DC53CC29FBB06400EF6C43 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 		B2DC53D029FBB0DF00EF6C43 /* RecordServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordServiceType.swift; sourceTree = "<group>"; };
 		B2DC53D229FBB30600EF6C43 /* RecordService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordService.swift; sourceTree = "<group>"; };
@@ -179,7 +183,9 @@
 		B2DC53AF29FBAB8600EF6C43 /* BullsEyeTests */ = {
 			isa = PBXGroup;
 			children = (
-				B2DC53B029FBAB8600EF6C43 /* BullsEyeTests.swift */,
+				A13E90302A015D7C00A71B7D /* RecordServiceTests.swift */,
+				A13E90322A015DB500A71B7D /* GameViewReactorTests.swift */,
+				A13E90342A015DE600A71B7D /* RecordViewReactorTests.swift */,
 			);
 			path = BullsEyeTests;
 			sourceTree = "<group>";
@@ -438,7 +444,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2DC53B129FBAB8600EF6C43 /* BullsEyeTests.swift in Sources */,
+				A13E90352A015DE600A71B7D /* RecordViewReactorTests.swift in Sources */,
+				A13E90312A015D7C00A71B7D /* RecordServiceTests.swift in Sources */,
+				A13E90332A015DB500A71B7D /* GameViewReactorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
