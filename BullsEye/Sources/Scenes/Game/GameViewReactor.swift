@@ -107,3 +107,9 @@ private extension GameViewReactor {
         """
     }
 }
+
+extension GameViewReactor {
+    func createRecordViewReactor() -> RecordViewReactor {
+        RecordViewReactor(recordService: recordService)
+    }
+}

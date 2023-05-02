@@ -32,6 +32,14 @@ final class GameViewController: BaseViewController, View {
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
         
+        mainView.listButton.rx.tap
+            .map { _ in reactor.createRecordViewReactor() }
+            .withUnretained(self)
+            .subscribe(onNext: { weakSelf, reactor in
+                weakSelf.pushRecordViewController(with: reactor)
+            })
+            .disposed(by: disposeBag)
+        
         mainView.slider.rx.value
             .map { Reactor.Action.changeExpectNumber($0) }
             .bind(to: reactor.action)
@@ -93,5 +101,11 @@ private extension GameViewController {
         let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "확인", style: .default))
         present(alertController, animated: true)
+    }
+    
+    func pushRecordViewController(with reactor: RecordViewReactor) {
+        let recordViewController = RecordViewController()
+        recordViewController.reactor = reactor
+        navigationController?.pushViewController(recordViewController, animated: true)
     }
 }
