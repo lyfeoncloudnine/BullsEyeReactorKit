@@ -34,7 +34,7 @@ private extension BullsEyeTests {
             
             context("저장된 기록이 있으면") {
                 var records: [Record]!
-                let record = Record(name: "guest", score: 100)
+                let record = Record(targetNumber: 100, score: 100)
                 
                 beforeEach {
                     records = recordService.create(record: record)

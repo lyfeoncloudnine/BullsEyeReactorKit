@@ -11,7 +11,7 @@ import Hook
 import Then
 
 final class RecordTableViewCell: BaseTableViewCell {
-    private let nameLabel = UILabel().then {
+    private let targetNumbereLabel = UILabel().then {
         $0.font = .preferredFont(forTextStyle: .body)
     }
     
@@ -22,23 +22,23 @@ final class RecordTableViewCell: BaseTableViewCell {
     override func configureViews() {
         super.configureViews()
         
-        contentView.addSubviews(nameLabel, scoreLabel)
+        contentView.addSubviews(targetNumbereLabel, scoreLabel)
         
-        nameLabel.hook
+        targetNumbereLabel.hook
             .top(equalTo: contentView.topAnchor, constant: 8)
             .leading(equalTo: contentView.leadingAnchor, constant: 8)
             .bottom(equalTo: contentView.bottomAnchor, constant: -8)
             
-        nameLabel.hook
-            .top(equalTo: nameLabel.topAnchor)
+        scoreLabel.hook
+            .top(equalTo: targetNumbereLabel.topAnchor)
             .trailing(equalTo: trailingAnchor, constant: -8)
-            .bottom(equalTo: nameLabel.bottomAnchor)
+            .bottom(equalTo: targetNumbereLabel.bottomAnchor)
     }
 }
 
 extension RecordTableViewCell {
     func configure(with record: Record) {
-        nameLabel.text = record.name
+        targetNumbereLabel.text = "\(record.targetNumber)"
         scoreLabel.text = "\(record.score)"
     }
 }

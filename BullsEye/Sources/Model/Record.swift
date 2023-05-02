@@ -9,12 +9,12 @@ import Foundation
 
 struct Record: Codable, Equatable {
     let id: String
-    let name: String
+    let targetNumber: Int
     let score: Int
     
-    init(id: String = UUID().uuidString, name: String, score: Int) {
+    init(id: String = UUID().uuidString, targetNumber: Int, score: Int) {
         self.id = id
-        self.name = name
+        self.targetNumber = targetNumber
         self.score = score
     }
 }
