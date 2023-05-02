@@ -19,7 +19,7 @@ struct RecordService: RecordServiceType {
         }
     }
     
-    func create(record: Record) -> [Record] {
+    @discardableResult func create(record: Record) -> [Record] {
         var records = records()
         records.append(record)
         records.sort { $0.score > $1.score }
