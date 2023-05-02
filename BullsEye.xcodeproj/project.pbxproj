@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B2056D912A00DCA600E0E09C /* RecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2056D902A00DCA600E0E09C /* RecordView.swift */; };
+		B2056D942A00DD3F00E0E09C /* ReuseableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2056D932A00DD3F00E0E09C /* ReuseableType.swift */; };
 		B2DC539729FBAB7E00EF6C43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DC539629FBAB7E00EF6C43 /* AppDelegate.swift */; };
 		B2DC53A029FBAB8000EF6C43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2DC539F29FBAB8000EF6C43 /* Assets.xcassets */; };
 		B2DC53A329FBAB8000EF6C43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2DC53A129FBAB8000EF6C43 /* LaunchScreen.storyboard */; };
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		B2056D902A00DCA600E0E09C /* RecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordView.swift; sourceTree = "<group>"; };
+		B2056D932A00DD3F00E0E09C /* ReuseableType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseableType.swift; sourceTree = "<group>"; };
 		B2DC539329FBAB7E00EF6C43 /* BullsEye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BullsEye.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2DC539629FBAB7E00EF6C43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2DC539F29FBAB8000EF6C43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -97,6 +99,14 @@
 				B2056D902A00DCA600E0E09C /* RecordView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		B2056D922A00DD2D00E0E09C /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				B2056D932A00DD3F00E0E09C /* ReuseableType.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 		B22B03C229FBDA2100E9BACC /* Frameworks */ = {
@@ -160,6 +170,7 @@
 				B2DC53D429FBBA4600EF6C43 /* Scenes */,
 				B2DC53DC29FBC3D300EF6C43 /* Base */,
 				B2DC53E029FBC47500EF6C43 /* Helper */,
+				B2056D922A00DD2D00E0E09C /* Protocol */,
 				B2DC53CB29FBB05800EF6C43 /* Model */,
 			);
 			path = Sources;
@@ -375,6 +386,7 @@
 				B2DC53E829FBC93B00EF6C43 /* BaseViewController.swift in Sources */,
 				B2DC53D729FBBA7D00EF6C43 /* GameViewReactor.swift in Sources */,
 				B2DC53DB29FBC3D000EF6C43 /* BaseView.swift in Sources */,
+				B2056D942A00DD3F00E0E09C /* ReuseableType.swift in Sources */,
 				B2DC53CD29FBB06400EF6C43 /* Record.swift in Sources */,
 				B2DC53EA29FBC99400EF6C43 /* GameViewController.swift in Sources */,
 				B2DC53D329FBB30600EF6C43 /* RecordService.swift in Sources */,
