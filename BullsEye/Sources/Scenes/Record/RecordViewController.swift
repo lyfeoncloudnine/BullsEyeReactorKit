@@ -35,7 +35,7 @@ final class RecordViewController: BaseViewController, View {
         
         // State
         reactor.state
-            .map { $0.records }
+            .map { $0.sectionOfRecords }
             .bind(to: mainView.tableView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
         
