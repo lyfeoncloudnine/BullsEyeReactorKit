@@ -34,6 +34,12 @@ final class GameViewReactor: Reactor {
     
     let initialState = State()
     
+    private let recordService: RecordServiceType
+    
+    init(recordService: RecordServiceType) {
+        self.recordService = recordService
+    }
+    
     func mutate(action: Action) -> Observable<Mutation> {
         switch action {
         case .play:
@@ -43,9 +49,9 @@ final class GameViewReactor: Reactor {
             return .just(.setExpectNumber(expectNumber))
             
         case .check:
-            if currentState.targetNumber == Int(currentState.expectNumber.rounded()) {
+            if let targetNumber = currentState.targetNumber, targetNumber == Int(currentState.expectNumber.rounded()) {
+                recordService.create(record: Record(targetNumber: targetNumber, score: currentState.score))
                 return .just(.finish)
-                
             } else {
                 return .just(.keepPlaying)
             }
