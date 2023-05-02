@@ -52,6 +52,11 @@ final class GameViewController: BaseViewController, View {
             .drive(mainView.checkButton.rx.isEnabled)
             .disposed(by: disposeBag)
         
+        isPlaying
+            .map { !$0 }
+            .drive(mainView.playButton.rx.isEnabled)
+            .disposed(by: disposeBag)
+        
         reactor.state
             .map { Float($0.expectNumber) }
             .distinctUntilChanged()
