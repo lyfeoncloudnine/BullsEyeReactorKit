@@ -21,6 +21,7 @@ class BaseTableViewCell: UITableViewCell, ReusableType {
     }
     
     func configureViews() {
+        selectionStyle = .none
         // Overrde Point
     }
 }
