@@ -110,8 +110,7 @@ private extension GameViewController {
     }
     
     func pushRecordViewController(with reactor: RecordViewReactor) {
-        let recordViewController = RecordViewController()
-        recordViewController.reactor = reactor
+        let recordViewController = ViewControllers.record(reactor).instantiate()
         navigationController?.pushViewController(recordViewController, animated: true)
     }
 }

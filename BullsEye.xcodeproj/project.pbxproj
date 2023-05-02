@@ -10,6 +10,8 @@
 		A13E90312A015D7C00A71B7D /* RecordServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13E90302A015D7C00A71B7D /* RecordServiceTests.swift */; };
 		A13E90332A015DB500A71B7D /* GameViewReactorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13E90322A015DB500A71B7D /* GameViewReactorTests.swift */; };
 		A13E90352A015DE600A71B7D /* RecordViewReactorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13E90342A015DE600A71B7D /* RecordViewReactorTests.swift */; };
+		A13E90372A015EC800A71B7D /* ViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13E90362A015EC800A71B7D /* ViewControllers.swift */; };
+		A13E90392A015EDC00A71B7D /* InstantiatableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13E90382A015EDC00A71B7D /* InstantiatableType.swift */; };
 		B2056D912A00DCA600E0E09C /* RecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2056D902A00DCA600E0E09C /* RecordView.swift */; };
 		B2056D942A00DD3F00E0E09C /* ReuseableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2056D932A00DD3F00E0E09C /* ReuseableType.swift */; };
 		B2056D962A00DE1700E0E09C /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2056D952A00DE1700E0E09C /* BaseTableViewCell.swift */; };
@@ -54,6 +56,8 @@
 		A13E90302A015D7C00A71B7D /* RecordServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordServiceTests.swift; sourceTree = "<group>"; };
 		A13E90322A015DB500A71B7D /* GameViewReactorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewReactorTests.swift; sourceTree = "<group>"; };
 		A13E90342A015DE600A71B7D /* RecordViewReactorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewReactorTests.swift; sourceTree = "<group>"; };
+		A13E90362A015EC800A71B7D /* ViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllers.swift; sourceTree = "<group>"; };
+		A13E90382A015EDC00A71B7D /* InstantiatableType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstantiatableType.swift; sourceTree = "<group>"; };
 		B2056D902A00DCA600E0E09C /* RecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordView.swift; sourceTree = "<group>"; };
 		B2056D932A00DD3F00E0E09C /* ReuseableType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseableType.swift; sourceTree = "<group>"; };
 		B2056D952A00DE1700E0E09C /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
@@ -131,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				B2056D932A00DD3F00E0E09C /* ReuseableType.swift */,
+				A13E90382A015EDC00A71B7D /* InstantiatableType.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -249,6 +254,7 @@
 		B2DC53D429FBBA4600EF6C43 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				A13E90362A015EC800A71B7D /* ViewControllers.swift */,
 				B2DC53D529FBBA6700EF6C43 /* Game */,
 				B2056D8E2A00DC8D00E0E09C /* Record */,
 			);
@@ -419,6 +425,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A13E90372A015EC800A71B7D /* ViewControllers.swift in Sources */,
 				B2DC53E329FBC4D600EF6C43 /* PreviewHelper.swift in Sources */,
 				B2056DAE2A0112D600E0E09C /* SectionOfRecords.swift in Sources */,
 				B2DC53D129FBB0DF00EF6C43 /* RecordServiceType.swift in Sources */,
@@ -434,6 +441,7 @@
 				B2DC53CD29FBB06400EF6C43 /* Record.swift in Sources */,
 				B2DC53EA29FBC99400EF6C43 /* GameViewController.swift in Sources */,
 				B2056D9C2A00E4B700E0E09C /* RecordViewReactor.swift in Sources */,
+				A13E90392A015EDC00A71B7D /* InstantiatableType.swift in Sources */,
 				B2056D9A2A00E48F00E0E09C /* RecordViewController.swift in Sources */,
 				B2056D962A00DE1700E0E09C /* BaseTableViewCell.swift in Sources */,
 				B2DC53D329FBB30600EF6C43 /* RecordService.swift in Sources */,

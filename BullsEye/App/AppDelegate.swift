@@ -19,9 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 private extension AppDelegate {
     func setRootViewController() {
-        let viewController = GameViewController()
-        viewController.reactor = GameViewReactor(recordService: RecordService())
-        let rootViewController = UINavigationController(rootViewController: viewController)
+        let gameViewController = ViewControllers.game(GameViewReactor(recordService: RecordService())).instantiate()
+        let rootViewController = UINavigationController(rootViewController: gameViewController)
         
         let initialWindow = UIWindow(frame: UIScreen.main.bounds)
         initialWindow.rootViewController = rootViewController
