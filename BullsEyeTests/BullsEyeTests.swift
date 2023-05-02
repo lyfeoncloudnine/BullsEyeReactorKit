@@ -14,6 +14,7 @@ final class BullsEyeTests: QuickSpec {
     override func spec() {
         recordServiceTests()
         gameViewReactorTests()
+        recordViewReactorTests()
     }
 }
 
@@ -61,7 +62,7 @@ private extension BullsEyeTests {
             var gameViewReactor: GameViewReactor!
             
             beforeEach {
-                gameViewReactor = GameViewReactor()
+                gameViewReactor = GameViewReactor(recordService: RecordService())
             }
             
             context("GameViewReactor가 초기화하면") {
@@ -147,6 +148,46 @@ private extension BullsEyeTests {
                     it("isPlaying은 false다") {
                         XCTAssertFalse(gameViewReactor.currentState.isPlaying)
                     }
+                }
+            }
+        }
+    }
+    
+    func recordViewReactorTests() {
+        describe("RecordViewReactor Tests") {
+            var recordViewReactor: RecordViewReactor!
+            var recordService: RecordServiceType!
+            
+            context("기록이 없으면") {
+                beforeEach {
+                    recordService = RecordService()
+                    recordViewReactor = RecordViewReactor(recordService: recordService)
+                }
+                
+                it("records가 비어있다") {
+                    recordViewReactor.action.onNext(.load)
+                    XCTAssertTrue(recordViewReactor.currentState.records.isEmpty)
+                }
+            }
+            
+            context("기록이 있으면") {
+                let record = Record(targetNumber: 100, score: 100)
+                beforeEach {
+                    recordService.create(record: record)
+                    recordViewReactor.action.onNext(.load)
+                }
+                
+                afterEach {
+                    recordService.clear()
+                }
+                
+                it("records가 존재한다") {
+                    XCTAssertFalse(recordViewReactor.currentState.records.isEmpty)
+                }
+                
+                it("기록을 지울 수 있다") {
+                    recordViewReactor.action.onNext(.delete(record: record))
+                    XCTAssertTrue(recordViewReactor.currentState.records.isEmpty)
                 }
             }
         }
