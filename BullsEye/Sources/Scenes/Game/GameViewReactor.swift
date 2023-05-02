@@ -29,6 +29,7 @@ final class GameViewReactor: Reactor {
         var score = 100
         var targetNumber: Int?
         var expectNumber: Float = 50
+        var title = "BullsEye 🎯"
         @Pulse var alertMessage: String?
     }
     

@@ -35,5 +35,11 @@ final class RecordViewController: BaseViewController, View {
                 cell.configure(with: record)
             }
             .disposed(by: disposeBag)
+        
+        reactor.state
+            .map { $0.title }
+            .distinctUntilChanged()
+            .bind(to: navigationItem.rx.title)
+            .disposed(by: disposeBag)
     }
 }

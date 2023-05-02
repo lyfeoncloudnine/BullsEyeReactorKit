@@ -21,6 +21,7 @@ final class RecordViewReactor: Reactor {
     
     struct State {
         var records = [Record]()
+        var title = "명예의 전당"
     }
     
     let initialState = State()

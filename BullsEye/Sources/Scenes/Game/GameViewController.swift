@@ -85,6 +85,12 @@ final class GameViewController: BaseViewController, View {
             .bind(to: mainView.targetNumberLabel.rx.text)
             .disposed(by: disposeBag)
         
+        reactor.state
+            .map { $0.title }
+            .distinctUntilChanged()
+            .bind(to: navigationItem.rx.title)
+            .disposed(by: disposeBag)
+        
         // Pulse
         reactor.pulse(\.$alertMessage)
             .compactMap { $0 }
