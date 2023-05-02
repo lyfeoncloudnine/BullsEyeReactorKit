@@ -68,7 +68,6 @@ final class GameViewController: BaseViewController, View {
         reactor.state
             .map { Float($0.expectNumber) }
             .distinctUntilChanged()
-            .debug()
             .bind(to: mainView.slider.rx.value)
             .disposed(by: disposeBag)
         
