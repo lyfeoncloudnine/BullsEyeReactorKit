@@ -45,7 +45,3 @@ struct RecordService: RecordServiceType {
         userDefaults.set(nil, forKey: key)
     }
 }
-
-private extension RecordService {
-    
-}
