@@ -7,6 +7,7 @@ Bulls-Eye app made with ReactorKit.
 * Using [ReactorKit](https://github.com/ReactorKit/ReactorKit)
 * Using [RxSwift](https://github.com/ReactiveX/RxSwift)
 * Using [RxDataSources](https://github.com/RxSwiftCommunity/RxDataSources)
+* Using [Quick](https://github.com/Quick/Quick)
 
 ### Requirements
 
