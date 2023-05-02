@@ -172,7 +172,7 @@ private extension BullsEyeTests {
             context("기록이 없으면") {
                 it("records가 비어있다") {
                     recordViewReactor.action.onNext(.load)
-                    XCTAssertTrue(recordViewReactor.currentState.records.isEmpty)
+                    XCTAssertTrue(recordViewReactor.currentState.sectionOfRecords.isEmpty)
                 }
             }
             
@@ -188,12 +188,12 @@ private extension BullsEyeTests {
                 }
                 
                 it("records가 존재한다") {
-                    XCTAssertFalse(recordViewReactor.currentState.records.isEmpty)
+                    XCTAssertFalse(recordViewReactor.currentState.sectionOfRecords.isEmpty)
                 }
                 
                 it("기록을 지울 수 있다") {
                     recordViewReactor.action.onNext(.delete(record))
-                    XCTAssertTrue(recordViewReactor.currentState.records.isEmpty)
+                    XCTAssertTrue(recordViewReactor.currentState.sectionOfRecords.isEmpty)
                 }
             }
         }
