@@ -14,6 +14,9 @@
 		B2056D9A2A00E48F00E0E09C /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2056D992A00E48F00E0E09C /* RecordViewController.swift */; };
 		B2056D9C2A00E4B700E0E09C /* RecordViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2056D9B2A00E4B700E0E09C /* RecordViewReactor.swift */; };
 		B2056D9E2A0104FA00E0E09C /* RecordHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2056D9D2A0104FA00E0E09C /* RecordHeaderView.swift */; };
+		B2056DA92A010ECE00E0E09C /* Differentiator in Frameworks */ = {isa = PBXBuildFile; productRef = B2056DA82A010ECE00E0E09C /* Differentiator */; };
+		B2056DAB2A010ECE00E0E09C /* RxDataSources in Frameworks */ = {isa = PBXBuildFile; productRef = B2056DAA2A010ECE00E0E09C /* RxDataSources */; };
+		B2056DAE2A0112D600E0E09C /* SectionOfRecords.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2056DAD2A0112D600E0E09C /* SectionOfRecords.swift */; };
 		B2DC539729FBAB7E00EF6C43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DC539629FBAB7E00EF6C43 /* AppDelegate.swift */; };
 		B2DC53A029FBAB8000EF6C43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2DC539F29FBAB8000EF6C43 /* Assets.xcassets */; };
 		B2DC53A329FBAB8000EF6C43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2DC53A129FBAB8000EF6C43 /* LaunchScreen.storyboard */; };
@@ -53,6 +56,7 @@
 		B2056D992A00E48F00E0E09C /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 		B2056D9B2A00E4B700E0E09C /* RecordViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewReactor.swift; sourceTree = "<group>"; };
 		B2056D9D2A0104FA00E0E09C /* RecordHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordHeaderView.swift; sourceTree = "<group>"; };
+		B2056DAD2A0112D600E0E09C /* SectionOfRecords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionOfRecords.swift; sourceTree = "<group>"; };
 		B2DC539329FBAB7E00EF6C43 /* BullsEye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BullsEye.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2DC539629FBAB7E00EF6C43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2DC539F29FBAB8000EF6C43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -80,6 +84,8 @@
 				B2DC53BF29FBAF1E00EF6C43 /* Hook in Frameworks */,
 				B2DC53C729FBAF6400EF6C43 /* RxSwift in Frameworks */,
 				B2DC53CA29FBAF7E00EF6C43 /* ReactorKit in Frameworks */,
+				B2056DAB2A010ECE00E0E09C /* RxDataSources in Frameworks */,
+				B2056DA92A010ECE00E0E09C /* Differentiator in Frameworks */,
 				B2DC53C229FBAF3400EF6C43 /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -98,6 +104,7 @@
 		B2056D8E2A00DC8D00E0E09C /* Record */ = {
 			isa = PBXGroup;
 			children = (
+				B2056DAC2A0112B600E0E09C /* DataSource */,
 				B2056D8F2A00DC9600E0E09C /* Views */,
 				B2056D992A00E48F00E0E09C /* RecordViewController.swift */,
 				B2056D9B2A00E4B700E0E09C /* RecordViewReactor.swift */,
@@ -121,6 +128,14 @@
 				B2056D932A00DD3F00E0E09C /* ReuseableType.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		B2056DAC2A0112B600E0E09C /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				B2056DAD2A0112D600E0E09C /* SectionOfRecords.swift */,
+			);
+			path = DataSource;
 			sourceTree = "<group>";
 		};
 		B22B03C229FBDA2100E9BACC /* Frameworks */ = {
@@ -298,6 +313,8 @@
 				B2DC53C429FBAF6400EF6C43 /* RxCocoa */,
 				B2DC53C629FBAF6400EF6C43 /* RxSwift */,
 				B2DC53C929FBAF7E00EF6C43 /* ReactorKit */,
+				B2056DA82A010ECE00E0E09C /* Differentiator */,
+				B2056DAA2A010ECE00E0E09C /* RxDataSources */,
 			);
 			productName = BullsEye;
 			productReference = B2DC539329FBAB7E00EF6C43 /* BullsEye.app */;
@@ -358,6 +375,7 @@
 				B2DC53C029FBAF3400EF6C43 /* XCRemoteSwiftPackageReference "Then" */,
 				B2DC53C329FBAF6400EF6C43 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				B2DC53C829FBAF7E00EF6C43 /* XCRemoteSwiftPackageReference "ReactorKit" */,
+				B2056DA72A010ECE00E0E09C /* XCRemoteSwiftPackageReference "RxDataSources" */,
 			);
 			productRefGroup = B2DC539429FBAB7E00EF6C43 /* Products */;
 			projectDirPath = "";
@@ -394,6 +412,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2DC53E329FBC4D600EF6C43 /* PreviewHelper.swift in Sources */,
+				B2056DAE2A0112D600E0E09C /* SectionOfRecords.swift in Sources */,
 				B2DC53D129FBB0DF00EF6C43 /* RecordServiceType.swift in Sources */,
 				B2056D982A00DE7C00E0E09C /* RecordTableViewCell.swift in Sources */,
 				B2DC539729FBAB7E00EF6C43 /* AppDelegate.swift in Sources */,
@@ -678,6 +697,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		B2056DA72A010ECE00E0E09C /* XCRemoteSwiftPackageReference "RxDataSources" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxDataSources";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		B2DC53BA29FBAF0B00EF6C43 /* XCRemoteSwiftPackageReference "Quick" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Quick/Quick";
@@ -721,6 +748,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		B2056DA82A010ECE00E0E09C /* Differentiator */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B2056DA72A010ECE00E0E09C /* XCRemoteSwiftPackageReference "RxDataSources" */;
+			productName = Differentiator;
+		};
+		B2056DAA2A010ECE00E0E09C /* RxDataSources */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B2056DA72A010ECE00E0E09C /* XCRemoteSwiftPackageReference "RxDataSources" */;
+			productName = RxDataSources;
+		};
 		B2DC53BB29FBAF0B00EF6C43 /* Quick */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B2DC53BA29FBAF0B00EF6C43 /* XCRemoteSwiftPackageReference "Quick" */;
