@@ -57,6 +57,7 @@
 		B2056D9B2A00E4B700E0E09C /* RecordViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewReactor.swift; sourceTree = "<group>"; };
 		B2056D9D2A0104FA00E0E09C /* RecordHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordHeaderView.swift; sourceTree = "<group>"; };
 		B2056DAD2A0112D600E0E09C /* SectionOfRecords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionOfRecords.swift; sourceTree = "<group>"; };
+		B2056E082A011F8A00E0E09C /* BullsEye.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = BullsEye.xctestplan; sourceTree = "<group>"; };
 		B2DC539329FBAB7E00EF6C43 /* BullsEye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BullsEye.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2DC539629FBAB7E00EF6C43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2DC539F29FBAB8000EF6C43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -148,6 +149,7 @@
 		B2DC538A29FBAB7E00EF6C43 = {
 			isa = PBXGroup;
 			children = (
+				B2056E082A011F8A00E0E09C /* BullsEye.xctestplan */,
 				B2DC539529FBAB7E00EF6C43 /* BullsEye */,
 				B2DC53AF29FBAB8600EF6C43 /* BullsEyeTests */,
 				B2DC539429FBAB7E00EF6C43 /* Products */,
