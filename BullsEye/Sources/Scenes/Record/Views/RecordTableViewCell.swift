@@ -7,17 +7,38 @@
 
 import UIKit
 
-class RecordTableViewCell: BaseTableViewCell {
+import Hook
+import Then
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+final class RecordTableViewCell: BaseTableViewCell {
+    private let nameLabel = UILabel().then {
+        $0.font = .preferredFont(forTextStyle: .body)
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    private let scoreLabel = UILabel().then {
+        $0.font = .preferredFont(forTextStyle: .body)
     }
+    
+    override func configureViews() {
+        super.configureViews()
+        
+        contentView.addSubviews(nameLabel, scoreLabel)
+        
+        nameLabel.hook
+            .top(equalTo: contentView.topAnchor, constant: 8)
+            .leading(equalTo: contentView.leadingAnchor, constant: 8)
+            .bottom(equalTo: contentView.bottomAnchor, constant: -8)
+            
+        nameLabel.hook
+            .top(equalTo: nameLabel.topAnchor)
+            .trailing(equalTo: trailingAnchor, constant: -8)
+            .bottom(equalTo: nameLabel.bottomAnchor)
+    }
+}
 
+extension RecordTableViewCell {
+    func configure(with record: Record) {
+        nameLabel.text = record.name
+        scoreLabel.text = "\(record.score)"
+    }
 }
