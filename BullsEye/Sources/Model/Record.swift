@@ -7,13 +7,15 @@
 
 import Foundation
 
-struct Record: Codable, Equatable {
-    let id: String
+import RxDataSources
+
+struct Record: Codable, Equatable, IdentifiableType {
+    let identity: String
     let targetNumber: Int
     let score: Int
     
-    init(id: String = UUID().uuidString, targetNumber: Int, score: Int) {
-        self.id = id
+    init(identity: String = UUID().uuidString, targetNumber: Int, score: Int) {
+        self.identity = identity
         self.targetNumber = targetNumber
         self.score = score
     }

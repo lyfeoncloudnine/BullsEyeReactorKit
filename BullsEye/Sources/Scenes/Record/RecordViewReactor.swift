@@ -16,11 +16,11 @@ final class RecordViewReactor: Reactor {
     }
     
     enum Mutation {
-        case setRecords([Record])
+        case setRecords([SectionOfRecords])
     }
     
     struct State {
-        var records = [Record]()
+        var records = [SectionOfRecords]()
         var title = "명예의 전당"
     }
     
@@ -36,11 +36,12 @@ final class RecordViewReactor: Reactor {
         switch action {
         case .load:
             let records = recordService.records()
-            return .just(.setRecords(records))
+            return .just(.setRecords([.init(items: records)]))
             
         case .delete(let record):
             let records = recordService.delete(record: record)
-            return .just(.setRecords(records))
+            let sections = SectionOfRecords(items: records)
+            return .just(.setRecords([sections]))
         }
     }
     

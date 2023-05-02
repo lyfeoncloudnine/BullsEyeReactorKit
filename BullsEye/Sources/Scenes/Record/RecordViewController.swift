@@ -8,6 +8,7 @@
 import UIKit
 
 import ReactorKit
+import RxDataSources
 
 final class RecordViewController: BaseViewController, View {
     let mainView = RecordView()
@@ -27,13 +28,15 @@ final class RecordViewController: BaseViewController, View {
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
         
+        mainView.tableView.rx.modelDeleted(Record.self)
+            .map { Reactor.Action.delete($0) }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
         // State
         reactor.state
             .map { $0.records }
-            .distinctUntilChanged()
-            .bind(to: mainView.tableView.rx.items(cellIdentifier: RecordTableViewCell.reuseIdentifier, cellType: RecordTableViewCell.self)) { _, record, cell in
-                cell.configure(with: record)
-            }
+            .bind(to: mainView.tableView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
         
         reactor.state
@@ -41,5 +44,21 @@ final class RecordViewController: BaseViewController, View {
             .distinctUntilChanged()
             .bind(to: navigationItem.rx.title)
             .disposed(by: disposeBag)
+    }
+}
+
+private extension RecordViewController {
+    var dataSource: RxTableViewSectionedAnimatedDataSource<SectionOfRecords> {
+        .init(
+            animationConfiguration: .init(),
+            configureCell: { dataSource, tableView, indexPath, record in
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: RecordTableViewCell.reuseIdentifier, for: indexPath) as? RecordTableViewCell else { return UITableViewCell() }
+                cell.configure(with: record)
+                return cell
+            },
+            canEditRowAtIndexPath: { _, _ in
+                return true
+            }
+        )
     }
 }

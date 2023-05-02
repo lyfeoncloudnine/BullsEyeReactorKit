@@ -33,7 +33,7 @@ struct RecordService: RecordServiceType {
         var records = records()
         
         guard records.isEmpty == false else { return records }
-        guard let index = records.firstIndex(where: { $0.id == record.id }) else { return records }
+        guard let index = records.firstIndex(where: { $0.identity == record.identity }) else { return records }
         
         records.remove(at: index)
         userDefaults.set(try? PropertyListEncoder().encode(records), forKey: key)
