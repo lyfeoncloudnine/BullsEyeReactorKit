@@ -7,23 +7,33 @@
 
 import UIKit
 
-class RecordViewController: BaseViewController {
+import ReactorKit
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+final class RecordViewController: BaseViewController, View {
+    let mainView = RecordView()
+    
+    var disposeBag = DisposeBag()
+    
+    override func configureViews() {
+        super.configureViews()
+        
+        view = mainView
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func bind(reactor: RecordViewReactor) {
+        // Action
+        Observable.just(())
+            .map { Reactor.Action.load }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
+        // State
+        reactor.state
+            .map { $0.records }
+            .distinctUntilChanged()
+            .bind(to: mainView.tableView.rx.items(cellIdentifier: RecordTableViewCell.reuseIdentifier, cellType: RecordTableViewCell.self)) { _, record, cell in
+                cell.configure(with: record)
+            }
+            .disposed(by: disposeBag)
     }
-    */
-
 }
